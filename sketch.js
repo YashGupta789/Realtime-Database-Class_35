@@ -3,7 +3,7 @@ var ball,database,position;
 function setup(){
     createCanvas(500,500);
     database = firebase.database();
-    ball = createSprite(250,250,10,10);
+    ball = createSprite(250,250,30,30);
     ball.shapeColor = "red";
     var ballpos = database.ref('ball/position');
     ballpos.on("value",readposition,showerror);
